@@ -77,7 +77,7 @@ function module.AddTargets(unit)
             if isself then
                 if not isPlayerOrPet then isPlayerOrPet = UnitPlayerControlled(unit) end
                 local reactionNum = UnitReaction(unit, "player")
-                if ( isPlayerOrPet and UnitCanAttack(target, "player") or (unit == "target") and UnitIsTappedByPlayer(unit)) or
+                if (isPlayerOrPet and UnitCanAttack(target, "player")) or
                    ( not isPlayerOrPet and reactionNum ~= nil and reactionNum > 0 and reactionNum <= 2 ) then
                         colour = "FF0000"
                 else
