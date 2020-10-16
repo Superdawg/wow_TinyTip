@@ -240,7 +240,7 @@ function module.TooltipFormat(unit, name, realm, isPlayer, isPlayerOrPet, isDead
             if levelDiff >= 5 or level == -1 then levelColour = "FF0000"
             elseif levelDiff >= 3 then levelColour = "FF6600"
             elseif levelDiff >= -2 then levelColour = "FFFF00"
-            elseif -levelDiff <= GetQuestGreenRange() then levelColour = "00FF00"
+            elseif -levelDiff <= UnitQuestTrivialLevelRange() then levelColour = "00FF00"
             else levelColour = "888888"
             end
         end
